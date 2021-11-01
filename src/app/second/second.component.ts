@@ -19,4 +19,7 @@ export class SecondComponent implements OnInit, CanComponentDeactivate {
   ngOnInit(): void {
   }
 
+  goBack(): void {
+    history.back();
+  }
 }
