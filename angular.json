@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "can-deactivate-sample"
+  "defaultProject": "can-deactivate-sample",
+  "cli": {
+    "analytics": "8321204f-0f1e-474b-98e4-1e76e5115823"
+  }
 }
