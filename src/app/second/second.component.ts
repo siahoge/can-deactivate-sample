@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { CanComponentDeactivate } from '../my-can-deactivate.guard';
 
@@ -9,7 +10,9 @@ import { CanComponentDeactivate } from '../my-can-deactivate.guard';
 })
 export class SecondComponent implements OnInit, CanComponentDeactivate {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   canDeactivate(): boolean | Observable<boolean> | Promise<boolean> {
 
@@ -19,7 +22,11 @@ export class SecondComponent implements OnInit, CanComponentDeactivate {
   ngOnInit(): void {
   }
 
-  goBack(): void {
+  goBack1(): void {
     history.back();
+  }
+
+  goBack2(): void {
+    this.router.navigateByUrl('/first-component');
   }
 }
